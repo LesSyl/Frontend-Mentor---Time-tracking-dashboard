@@ -1,0 +1,319 @@
+@use './reset';
+@use './footer' as *;
+@use './mixins' as *;
+@use './colors' as *;
+
+body {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 100vh;
+	font-family: 'Rubik', sans-serif;
+	font-weight: 300;
+	color: $text-color;
+	background-color: $bg-color;
+}
+main {
+	gap: 1.5em;
+}
+
+.wrapper {
+	display: grid;
+	margin: 5em 1em;
+
+	.activity,
+	.name-section {
+		width: 19em;
+		height: 12.5em;
+	}
+
+	.activity {
+		display: flex;
+		justify-content: center;
+		align-items: end;
+		border-radius: 0.9em;
+		background-position: 90% -8%;
+		background-repeat: no-repeat;
+
+		@include activityBg();
+
+		&-container {
+			height: 10em;
+			width: 100%;
+			padding: 2em 1em;
+			background-color: $bg-section-color;
+			border-radius: 0.9em;
+			transition: background-color 0.4s;
+			cursor: pointer;
+			&__title,
+			&__time {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				&-h2 {
+					font-size: 1.2rem;
+					font-weight: 400;
+				}
+				.svg {
+					padding: 1em;
+					cursor: pointer;
+				}
+			}
+			&__time {
+				&-hrs {
+					font-size: 2rem;
+				}
+				&-last {
+					font-size: .9rem;
+					color: $darkened-text;
+				}
+			}
+			&:hover{
+				background-color: $bg-active-section-color;
+			}
+		}
+	}
+	.svg path:hover {
+		fill: $text-color;
+	}
+}
+
+.name-section {
+	position: relative;
+	background-color: $bg-section-color;
+	border-radius: 0.9em;
+	&__date {
+		position: absolute;
+		top: 0;
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		width: 100%;
+		height: 8em;
+		padding-left: 1.5em;
+		background-color: $date-color;
+		border-radius: 0.9em;
+		&-img {
+			width: 4em;
+			border-radius: 50%;
+			border: 3px solid $text-color;
+		}
+		&-details {
+			margin-left: 1em;
+			&-text {
+				font-size: 0.9rem;
+				font-weight: 400;
+				line-height: 0.8;
+				color: $darkened-text;
+			}
+			&-name {
+				font-size: 1.5rem;
+				font-weight: 300;
+				color: $text-color;
+			}
+		}
+	}
+	&__time-frames {
+		position: absolute;
+		bottom: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		&-dot {
+			list-style: none;
+		}
+		&-btn {
+			padding: 1.5em;
+			color: $darkened-text;
+			background-color: transparent;
+			border: none;
+			cursor: pointer;
+			transition: color 0.4s;
+			&:hover {
+				color: $text-color;
+			}
+		}
+	}
+	&--active {
+		color: $text-color;
+	}
+}
+
+@media (width >= 48em) {
+	.wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+
+		.name-section {
+			grid-column: 1/3;
+			grid-row: 1/2;
+			width: 100%;
+			&__date {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 0;
+				&-img {
+					margin-right: 2em;
+				}
+			}
+			&__time-frames {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				&-dot {
+					padding: 0 2em;
+				}
+			}
+		}
+		.activity {
+			height: 12.5em;
+			&-container {
+				height: 10.3em;
+			}
+		}
+		.work {
+			grid-column: 1/2;
+			grid-row: 2/3;
+		}
+		.play {
+			grid-column: 2/3;
+			grid-row: 2/3;
+		}
+		.study {
+			grid-column: 1/2;
+			grid-row: 3/4;
+		}
+		.exercise {
+			grid-column: 2/3;
+			grid-row: 3/4;
+		}
+		.social {
+			grid-column: 1/2;
+			grid-row: 4/5;
+		}
+		.self-care {
+			grid-column: 2/3;
+			grid-row: 4/5;
+		}
+	}
+}
+
+@media (width >= 62em) {
+	.wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+
+		.activity,
+		.name-section {
+			width: 12.5em;
+		}
+
+		.name-section {
+			grid-column: 1/2;
+			grid-row: 1/3;
+			height: 100%;
+			&__date {
+				display: flex;
+				flex-direction: column;
+				justify-content: start;
+				align-items: start;
+				height: 17.5em;
+				padding: 1.5em;
+				&-details {
+					margin: 2em 0 0 0;
+					&-text {
+						padding: 0.5em 0;
+						font-size: 0.8rem;
+					}
+					&-name {
+						font-size: 1.9rem;
+						line-height: 1.3;
+					}
+				}
+			}
+			&__time-frames {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: start;
+				bottom: 1em;
+				&-btn {
+					padding: 0.5em;
+				}
+			}
+		}
+		.work {
+			grid-column: 2/3;
+			grid-row: 1/2;
+		}
+		.play {
+			grid-column: 3/4;
+			grid-row: 1/2;
+		}
+		.study {
+			grid-column: 4/5;
+			grid-row: 1/2;
+		}
+		.exercise {
+			grid-column: 2/3;
+			grid-row: 2/3;
+		}
+		.social {
+			grid-column: 3/4;
+			grid-row: 2/3;
+		}
+		.self-care {
+			grid-column: 4/5;
+			grid-row: 2/3;
+		}
+
+		.activity {
+			// display: flex;
+			// justify-content: center;
+			// align-items: end;
+			// border-radius: 0.9em;
+			// background-position: 90% -8%;
+			// background-repeat: no-repeat;
+
+			// @include activityBg();
+
+			&-container {
+				// height: 10em;
+				// width: 100%;
+				padding: 1.5em;
+				// background-color: $bg-section-color;
+				// border-radius: 0.9em;
+				&__title,
+				&__time {
+					// display: flex;
+					// justify-content: space-between;
+					// align-items: center;
+					&-h2 {
+						font-size: 0.9rem;
+						// font-weight: 400;
+					}
+				}
+				&__time {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: start;
+
+					// &-hrs {
+					// 	font-size: 2.5rem;
+					// }
+					&-last {
+						font-size: 0.7rem;
+						color: $darkened-text;
+					}
+				}
+			}
+		}
+	}
+}

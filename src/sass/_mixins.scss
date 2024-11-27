@@ -1,0 +1,28 @@
+@use './colors' as *;
+
+@mixin activityBg() {
+    &.work {
+      background-color: $light-red-w;
+      background-image: url("../img/icon-work.svg");
+    }
+    &.play {
+      background-color: $soft-blue;
+      background-image: url("../img/icon-play.svg");
+    }
+    &.study {
+      background-color: $light-red-s;
+      background-image: url("../img/icon-study.svg");
+    }
+    &.exercise {
+      background-color: $lime-green;
+      background-image: url("../img/icon-exercise.svg");
+    }
+    &.social {
+      background-color: $violet;
+      background-image: url("../img/icon-social.svg");
+    }
+    &.self-care {
+      background-color: $soft-orange;
+      background-image: url("../img/icon-self-care.svg");
+    }
+  }

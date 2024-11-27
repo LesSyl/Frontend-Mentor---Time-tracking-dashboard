@@ -1,0 +1,24 @@
+@use 'colors' as *;
+
+.attribution {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+    padding: 0.5em;
+	font-size: .7rem;
+	text-align: center;
+	color: $text-color;
+	&__link {
+		position: relative;
+		text-decoration: none;
+		color: $link-color;
+        &:hover{
+            color: $date-color;
+        }
+	}
+}
+@media (width >= 62em) {
+	.attribution {
+		font-size: .9rem;
+	}
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time tracking dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/main.min.css">
+</head>
+
+<body>
+    <main class="wrapper">
+        <section class="name-section">
+            <div class="name-section__date">
+                <div class="name-section__date-img">
+                    <img src="dist/img/image-jeremy.png" alt="Profile picture of Jeremy Robson">
+                </div>
+                <div class="name-section__date-details">
+                    <p class="name-section__date-details-text" tabindex="0">Report for</p>
+                    <h1 class="name-section__date-details-name" tabindex="0">Jeremy Robson</h1>
+                </div>
+            </div>
+            <ul role="tablist" class="name-section__time-frames">
+                <li class="name-section__time-frames-dot"><button role="tab" aria-selected="false"
+                        class="name-section__time-frames-btn">Daily</button></li>
+                <li class="name-section__time-frames-dot"><button role="tab" aria-pressed="true"
+                        class="name-section__time-frames-btn" data-default>Weekly</button>
+                </li>
+                <li class="name-section__time-frames-dot"><button role="tab" aria-selected="false"
+                        class="name-section__time-frames-btn">Monthly</button></li>
+            </ul>
+        </section>
+
+
+        <!-- ////////////////////WORK//////////////////////////// -->
+        <section class="activity work" id="work" role="tabpanel">
+            <div class="activity-container">
+                <div class="activity-container__title">
+                    <h2 class="activity-container__title-h2" id="name-card" tabindex="0"></h2>
+                    <div class="svg"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" tabindex="0">
+                            <path
+                                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                                fill="#BBC0FF" fill-rule="evenodd"></path>
+                        </svg></div>
+
+                </div>
+                <div class="activity-container__time">
+                    <p class="activity-container__time-hrs"></p>
+                    <p class="activity-container__time-last"></p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ///////////////PLAY////////////////////////////////// -->
+        <section class="activity play" role="tabpanel">
+            <div class="activity-container">
+                <div class="activity-container__title">
+                    <h2 class="activity-container__title-h2" tabindex="0"></h2>
+                    <div class="svg"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" tabindex="0">
+                            <path
+                                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                                fill="#BBC0FF" fill-rule="evenodd"></path>
+                        </svg></div>
+                </div>
+                <div class="activity-container__time">
+                    <p class="activity-container__time-hrs"></p>
+                    <p class="activity-container__time-last"></p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- //////////////////////STUDY//////////////////////////// -->
+        <section class="activity study" role="tabpanel">
+            <div class="activity-container">
+                <div class="activity-container__title">
+                    <h2 class="activity-container__title-h2" tabindex="0"></h2>
+                    <div class="svg"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" tabindex="0">
+                            <path
+                                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                                fill="#BBC0FF" fill-rule="evenodd"></path>
+                        </svg></div>
+                </div>
+                <div class="activity-container__time">
+                    <p class="activity-container__time-hrs"></p>
+                    <p class="activity-container__time-last"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- //////////////////////EXERCISE/////////////////////////////// -->
+        <section class="activity exercise" role="tabpanel">
+            <div class="activity-container">
+                <div class="activity-container__title">
+                    <h2 class="activity-container__title-h2" tabindex="0"></h2>
+                    <div class="svg"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" tabindex="0">
+                            <path
+                                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                                fill="#BBC0FF" fill-rule="evenodd"></path>
+                        </svg></div>
+                </div>
+                <div class="activity-container__time">
+                    <p class="activity-container__time-hrs"></p>
+                    <p class="activity-container__time-last"></p>
+                </div>
+            </div>
+        </section>
+        <!-- //////////////////////SOCIAL/////////////////////////////// -->
+        <section class="activity social" role="tabpanel">
+            <div class="activity-container">
+                <div class="activity-container__title">
+                    <h2 class="activity-container__title-h2" tabindex="0"></h2>
+                    <div class="svg"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" tabindex="0">
+                            <path
+                                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                                fill="#BBC0FF" fill-rule="evenodd"></path>
+                        </svg></div>
+                </div>
+                <div class="activity-container__time">
+                    <p class="activity-container__time-hrs"></p>
+                    <p class="activity-container__time-last"></p>
+                </div>
+            </div>
+        </section>
+        <!-- //////////////////////SELF CARE////////////////////////////// -->
+        <section class="activity self-care" role="tabpanel">
+            <div class="activity-container">
+                <div class="activity-container__title">
+                    <h2 class="activity-container__title-h2" tabindex="0"></h2>
+                    <div class="svg"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" tabindex="0">
+                            <path
+                                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                                fill="#BBC0FF" fill-rule="evenodd"></path>
+                        </svg></div>
+
+                </div>
+                <div class="activity-container__time">
+                    <p class="activity-container__time-hrs"></p>
+                    <p class="activity-container__time-last"></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        class="attribution__link attribution__link-one">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/LesSyl" target="_blank"
+        class="attribution__link attribution__link-two">LesSyl</a>.
+</footer>
+    <script src="dist/js/main.min.js"></script>
+</body>
+
+</html>
