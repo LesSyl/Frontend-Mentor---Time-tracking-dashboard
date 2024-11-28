@@ -64,6 +64,7 @@ main {
 			&__time {
 				&-hrs {
 					font-size: 2rem;
+					margin: 0.4em 0 0 0;
 				}
 				&-last {
 					font-size: .9rem;
@@ -171,9 +172,9 @@ main {
 			}
 		}
 		.activity {
-			height: 12.5em;
+			height: 12.2em;
 			&-container {
-				height: 10.3em;
+				height: 10em;
 			}
 		}
 		.work {
@@ -211,7 +212,7 @@ main {
 
 		.activity,
 		.name-section {
-			width: 14.3em;
+			width: 13em;
 		}
 
 		.name-section {
@@ -226,7 +227,7 @@ main {
 				height: 17.5em;
 				padding: 1.5em;
 				&-details {
-					margin: 2em 0 0 0;
+					margin: 1.5em 0 0 0;
 					&-text {
 						padding: 0.5em 0;
 						font-size: 0.8rem;
@@ -240,12 +241,12 @@ main {
 			&__time-frames {
 				display: flex;
 				flex-direction: column;
-				justify-content: center;
 				align-items: start;
-				bottom: 1em;
-				&-btn {
-					padding: 0.5em;
+				bottom: .5em;
+				&-btn{
+					padding: .5em 0;
 				}
+		
 			}
 		}
 		.work {
