@@ -274,29 +274,15 @@ main {
 		}
 
 		.activity {
-			// display: flex;
-			// justify-content: center;
-			// align-items: end;
-			// border-radius: 0.9em;
-			// background-position: 90% -8%;
-			// background-repeat: no-repeat;
-
-			// @include activityBg();
 
 			&-container {
-				// height: 10em;
-				// width: 100%;
+	
 				padding: 1.5em;
-				// background-color: $bg-section-color;
-				// border-radius: 0.9em;
 				&__title,
 				&__time {
-					// display: flex;
-					// justify-content: space-between;
-					// align-items: center;
 					&-h2 {
 						font-size: 0.9rem;
-						// font-weight: 400;
+
 					}
 				}
 				&__time {
@@ -305,9 +291,6 @@ main {
 					justify-content: center;
 					align-items: start;
 
-					// &-hrs {
-					// 	font-size: 2.5rem;
-					// }
 					&-last {
 						font-size: 0.7rem;
 						color: $darkened-text;
