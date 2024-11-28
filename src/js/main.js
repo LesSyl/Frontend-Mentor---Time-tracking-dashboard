@@ -3,14 +3,14 @@ const nameCard = document.querySelectorAll('.activity-container__title-h2')
 const hrs = document.querySelectorAll('.activity-container__time-hrs')
 const duration = document.querySelectorAll('.activity-container__time-last')
 
-const URL = '/data.json'
+const URL = "data.json"
 
 async function fetchData() {
 	try {
 		const res = await fetch(URL)
 		if (!res.ok) {
 			console.log('Oops! Something went wrong.')
-			throw new Error(response.statusText)
+			throw new Error(res.statusText)
 		}
 		const data = await res.json()
 		return data
@@ -28,7 +28,7 @@ async function time(name) {
 		hrs[i].textContent = `${item.timeframes[name].current}hrs`
 
 		const num = `${item.timeframes[name].previous}hrs`
-		console.log()
+		
 		if (name === 'daily') {
 			duration[i].textContent = 'Yesterday - ' + num
 		} else if (name === 'weekly') {
@@ -37,8 +37,8 @@ async function time(name) {
 			duration[i].textContent = 'Last Month - ' + num
 		}
 	})
+	
 }
-
 
 const activeLink = selectedLink => {
 	menuItems.forEach(link => {
@@ -55,7 +55,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	const defaultTime = link.textContent.toLowerCase()
 	time(defaultTime)
 	activeLink(link)
-	// console.log(defaultTime);
 })
 
 menuItems.forEach(link => {

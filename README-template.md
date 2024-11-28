@@ -27,9 +27,9 @@ Mobile
 
 ### Links
 
-- Repository URL:[GitHub](https://github.com/LesSyl/Newsletter-sign-up-form-with-success-message)
+- Repository URL:[GitHub](https://github.com/LesSyl/Time-tracking-dashboard)
 - Solution URL: [Frontendmentor]()
-- Live Site URL: [Live](https://lessyl.github.io/Newsletter-sign-up-form-with-success-message/)
+- Live Site URL: [Live](https://lessyl.github.io/Time-tracking-dashboard/)
 ## My process
 
 ### Built with
@@ -39,13 +39,13 @@ Mobile
 - Sass
 - BEM
 - Flexbox
+- Grid
 - JS
 - kit
 - JSON
 
 ### What I learned
 
-In this challenge, I worked on creating responsive websites, which gave me a better understanding of techniques for adapting a website's appearance to different device resolutions. I also learned how to add my own fonts using @font-face, which gives me more freedom to customise the aesthetics of the site. The main issues I have mastered are methods to prevent the page from reloading, so that the user can use the site smoothly. In addition, I have explored the principles of correct form validation, which allows for effective protection of user data and better management of errors when entering information.
 
 ## Author
 
