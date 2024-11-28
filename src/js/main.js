@@ -7,12 +7,12 @@ const URL = 'data.json'
 
 async function fetchData() {
 	try {
-		const res = await fetch(URL)
-		if (!res.ok) {
+		const response = await fetch(URL)
+		if (!response.ok) {
 			console.log('Oops! Something went wrong.')
-			throw new Error(res.statusText)
+			throw new Error(response.statusText)
 		}
-		const data = await res.json()
+		const data = await response.json()
 		return data
 	} catch {
 		console.error('error')
