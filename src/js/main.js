@@ -5,7 +5,7 @@ const duration = document.querySelectorAll('.activity-container__time-last')
 
 
 async function fetchData() {
-	const URL = '/data.json'
+	const URL = 'data.json'
 	try {
 		const response = await fetch(URL)
 		if (!response.ok) {

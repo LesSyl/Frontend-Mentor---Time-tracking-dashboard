@@ -43,9 +43,11 @@ Mobile
 - JS
 - kit
 - JSON
+- Fetch
 
 ### What I learned
 
+My first project with data retrieval was an extremely inspiring and educational experience for me. I learned how to work with the JSON format, which proved to be crucial in uploading and storing data in a structured and readable way. I also learned how to retrieve data from the server. One of the most important topics I mastered was asynchronous functionality, which allows me to effectively manage background operations without blocking the operation of other functions. I also understood how fetch works, which enabled me to fetch and upload data in a simple and efficient way. This project was a great introduction to working with APIs and has significantly enhanced my programming skills.
 
 ## Author
 
