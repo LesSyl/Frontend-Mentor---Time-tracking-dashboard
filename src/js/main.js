@@ -3,9 +3,9 @@ const nameCard = document.querySelectorAll('.activity-container__title-h2')
 const hrs = document.querySelectorAll('.activity-container__time-hrs')
 const duration = document.querySelectorAll('.activity-container__time-last')
 
-const URL = "../../data.json"
 
 async function fetchData() {
+	const URL = "data.json"
 	try {
 		const response = await fetch(URL)
 		if (!response.ok) {
