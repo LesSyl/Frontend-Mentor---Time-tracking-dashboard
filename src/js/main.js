@@ -3,9 +3,9 @@ const nameCard = document.querySelectorAll('.activity-container__title-h2')
 const hrs = document.querySelectorAll('.activity-container__time-hrs')
 const duration = document.querySelectorAll('.activity-container__time-last')
 
+const URL = "../../data.json"
 
 async function fetchData() {
-	const URL = "../../data.json"
 	try {
 		const response = await fetch(URL)
 		if (!response.ok) {
@@ -27,14 +27,13 @@ async function time(name) {
 		nameCard[i].textContent = item.title
 		hrs[i].textContent = `${item.timeframes[name].current}hrs`
 
-		const num = `${item.timeframes[name].previous}hrs`
 		
 		if (name === 'daily') {
-			duration[i].textContent = 'Yesterday - ' + num
+			duration[i].textContent = 'Yesterday - ' + `${item.timeframes[name].previous}hrs`
 		} else if (name === 'weekly') {
-			duration[i].textContent = 'Last Week - ' + num
+			duration[i].textContent = 'Last Week - ' + `${item.timeframes[name].previous}hrs`
 		} else if (name === 'monthly') {
-			duration[i].textContent = 'Last Month - ' + num
+			duration[i].textContent = 'Last Month - ' + `${item.timeframes[name].previous}hrs`
 		}
 	})
 	
