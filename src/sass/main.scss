@@ -53,7 +53,7 @@ main {
 				justify-content: space-between;
 				align-items: center;
 				&-h2 {
-					font-size: 1.2rem;
+					font-size: 1rem;
 					font-weight: 400;
 				}
 				.svg {
@@ -63,8 +63,7 @@ main {
 			}
 			&__time {
 				&-hrs {
-					font-size: 2rem;
-					margin: 0.4em 0 0 0;
+					font-size: 2.5rem;
 				}
 				&-last {
 					font-size: 0.9rem;
@@ -162,6 +161,10 @@ main {
 				&-img {
 					margin-right: 2em;
 				}
+				&-details-name {
+					font-size: 2rem;
+					padding: 0;
+				}
 			}
 			&__time-frames {
 				display: flex;
@@ -211,23 +214,21 @@ main {
 			width: 14.7em;
 		}
 		.activity {
-			height: 15em;
+			height: 15.5em;
 
 			&-container {
 				height: 13em;
 				padding: 1.5em;
-				&__title,
-				&__time {
-					&-h2 {
-						font-size: 0.9rem;
-					}
-				}
 				&__time {
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
 					align-items: start;
-
+					&-hrs {
+						font-size: 3.5rem;
+						margin-top: .2em
+						;
+					}
 					&-last {
 						margin-top: 0.5em;
 						font-size: 0.7rem;
