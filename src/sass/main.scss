@@ -97,7 +97,7 @@ main {
 		background-color: $date-color;
 		border-radius: 0.9em;
 		&-img {
-			width: 4em;
+			width: 4.5em;
 			border-radius: 50%;
 			border: 3px solid $text-color;
 		}
@@ -111,7 +111,7 @@ main {
 				color: $darkened-text;
 			}
 			&-name {
-				padding: 0.2em;
+				padding: 0.2em 0;
 				font-size: 1.5rem;
 				font-weight: 300;
 				color: $text-color;
@@ -128,7 +128,7 @@ main {
 			list-style: none;
 		}
 		&-btn {
-			padding: .5em 1em;
+			padding: 0.5em 1em;
 			color: $darkened-text;
 			background-color: transparent;
 			border: none;
@@ -211,10 +211,29 @@ main {
 			width: 14.7em;
 		}
 		.activity {
-			height: 14.2em;
+			height: 15em;
 
 			&-container {
-				height: 11.5em;
+				height: 13em;
+				padding: 1.5em;
+				&__title,
+				&__time {
+					&-h2 {
+						font-size: 0.9rem;
+					}
+				}
+				&__time {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: start;
+
+					&-last {
+						margin-top: 0.5em;
+						font-size: 0.7rem;
+						color: $darkened-text;
+					}
+				}
 			}
 		}
 
@@ -227,8 +246,11 @@ main {
 				flex-direction: column;
 				justify-content: start;
 				align-items: start;
-				height: 17.5em;
+				height: 20em;
 				padding: 1.5em;
+				&-img {
+					width: 5.5em;
+				}
 				&-details {
 					margin: 1.5em 0 0 0;
 					&-text {
@@ -274,29 +296,6 @@ main {
 		.self-care {
 			grid-column: 4/5;
 			grid-row: 2/3;
-		}
-
-		.activity {
-			&-container {
-				padding: 1.5em;
-				&__title,
-				&__time {
-					&-h2 {
-						font-size: 0.9rem;
-					}
-				}
-				&__time {
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					align-items: start;
-
-					&-last {
-						font-size: 0.7rem;
-						color: $darkened-text;
-					}
-				}
-			}
 		}
 	}
 }
