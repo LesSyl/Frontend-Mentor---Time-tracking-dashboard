@@ -1,3 +1,4 @@
+@use './colors' as *;
 *,
 *::before,
 *::after {
@@ -31,6 +32,7 @@ img {
 	max-inline-size: 100%;
 	max-block-size: 100%;
 }
+
 p,
 h1,
 h2 {
