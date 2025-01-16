@@ -29,8 +29,8 @@ Mobile
 ### Links
 
 - Repository URL:[GitHub](https://github.com/LesSyl/Time-tracking-dashboard)
-- Solution URL: [Frontendmentor]()
-- Live Site URL: [Live](https://lessyl.github.io/Time-tracking-dashboard/)
+- Solution URL: [Frontendmentor](https://www.frontendmentor.io/solutions/time-tracking-dashboard-UQsawQJTZt)
+- Live Site URL: [Live](https://lessyl.github.io/Frontend-Mentor---Time-tracking-dashboard/)
 ## My process
 
 ### Built with
